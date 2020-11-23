@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="ToDoList.css">
+
+    <title>To Do List</title>
+</head>
+<body>
+<h1> Stuff I have to complete: </h1>
+
+<form action="">
+    <input type="text" id="input">
+    <button type="button" color: red size: 12 onclick="add()" Add></button>
+</form>
+
+<ol id="ol"></ol>
+
+<script>
+    function add(){
+        var input=document.getElementById('input').value;
+        var ol=document.getElementById('ol');
+        var li=document.createElement('li');
+        var text=document.createTextNode(input);
+        li.appendChild(text);
+        ol.appendChild(li);
+    }
+</script>
+</body>
+</html>
